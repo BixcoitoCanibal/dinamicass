@@ -1,0 +1,94 @@
+:root {
+  --cinza: #aaa;
+  --vermelha: #000000;
+  --vermelha-escura: #ffa500;
+  --branca: #ffffff;
+  --luz: rgb(130, 0, 219);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #4F4F4F 20%,#141414 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--branca);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+
+.conta {
+  background-color: #141414;
+  border: #141414;
+
+  position: absolute;
+  right: 50px;
+}
+
+
+.container {
+  position: relative;
+}
+
+img {
+  width: 300px; /* Largura da imagem */
+  height: auto; /* Altura se ajusta automaticamente à largura */
+  display: flex; /* Remove espaços em branco abaixo da imagem */
+  position: absolute;
+  top: 100px; /* Centraliza verticalmente */
+  right: 300px; /* Centraliza horizontalmente */
+  
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #141414 20%,#919191 100%);
+  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.tecla {
+  background-color: var(--branca);
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 var(--cinza);
+  color: var(#ffffff);
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--vermelha);
+  border: 4px solid  var(#ffffff);
+  box-shadow: 3px 3px 0 var(993399) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--luz);
+}
+
+.tecla.ativa:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 var(#ffffff) inset, 1px 1px 10px var(--luz);
+
+
+
+}
